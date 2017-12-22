@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daimler - Basket</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="libs-polyfills/jquery-3.2.1.js"></script>
+</head>
+
+<body>
+  <header>
+    <section>
+      <div class="container-header">
+        <a href="https://www.daimler.com">
+          Link to Daimler Website
+        </a>
+        <h1>
+          Expect sailing trips as well!
+        </h1>
+      </div>
+    </section>
+  </header>
+  <main class="container wrapper">
+    <nav class="container">
+      <ul>
+        <li>
+          <a href="https://www.daimler.com">Home</a>
+        </li>
+        <li>
+          <a class="default">Shopping for the annual sailing trip</a>
+        </li>
+      </ul>
+    </nav>
+    <article id="section-shop">
+      <h2>The Shop</h2>
+      <p>Ahoy landman! Pick what you need for the big trip. You gonna be out there some days, so better leave prepared.</p>
+      <p class="bold">
+        Please note: All prices are without
+        <abbr title="Value Added Tax">VAT</abbr>!
+      </p>
+      <ol>
+        <li>
+          <div>
+            <h3>Towel</h3>
+            <p>Sunny days and warm weather - you clearly need it after a refreshing jump into the cool sea.</p>
+          </div>
+          <footer>
+            <p class="price">&euro;10</p>
+            <button data-shop-listing='{"name": "Towel", "description": "Sunny days and warm weather - you clearly need it after a refreshing jump into the cool sea.", "price": 10.00}'>Add to cart</button>
+          </footer>
+        </li>
+        <li>
+          <div>
+            <h3>Enlightening book</h3>
+            <p>There&rsquo;s no rush out there. Take your time for a good read.</p>
+          </div>
+          <footer>
+            <p class="price">&euro;5.99</p>
+            <button data-shop-listing='{"name": "Enlightening book", "description": "There&rsquo;s no rush out there. Take your time for a good read.", "price": 5.99}'>Add to cart</button>
+          </footer>
+        </li>
+        <li>
+          <div>
+            <h3>Waterproof camera</h3>
+            <p>Below the sea&rsquo;s surface, a hidden world. Don't miss out to bring those memories back home.</p>
+          </div>
+          <footer>
+            <p class="price">&euro;49.99</p>
+            <button data-shop-listing='{"name": "Waterproof camera", "description": "Below the sea&rsquo;s surface, a hidden world. Do not miss out to bring those memories back home.", "price": 49.99}'>Add to cart</button>
+          </footer>
+        </li>
+        <li>
+          <div>
+            <h3>Pinwheel</h3>
+            <p>Wondering what to do when there's only a light breeze? Back to your childhood!</p>
+          </div>
+          <footer>
+            <p class="price">&euro;2.50</p>
+            <button data-shop-listing='{"name": "Pinwheel", "description": "Wondering what to do with only a light breeze? Back to your childhood!", "price": 2.50}'>Add to cart</button>
+          </footer>
+        </li>
+      </ol>
+    </article>
+    <article id="section-shoppingcart">
+      <h2 class="cart-title">Your boat's shopping cart</h2>
+      <form id="shoppingcart-form">
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody class="items-list">
+            <tr class="item-example">
+              <td>
+                <h3 class="name">PLACEHOLDER</h3>
+                <p class="description">PLACEHOLDER</p>
+                <div>
+                  <button class="remove-btn" type="button">Remove</button>
+                </div>
+              </td>
+              <td>
+                <output class="price"></output>
+              </td>
+              <td>
+                <input class="quantity" type="number" min="1" value="1">
+                <span>
+                  <button type="button" aria-label="decrease">
+                    -
+                  </button>
+                  <button type="button" aria-label="step up">
+                    +
+                  </button>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot class="cart-value">
+            <tr>
+              <td colspan="3">
+                <ol>
+                  <li>
+                    <label>Price before
+                      <abbr title="Value Added Tax">VAT</abbr>:</label>
+                    <output class="total-price">€0</output>
+                  </li>
+                  <li>
+                    <label>
+                      <abbr title="Value Added Tax">VAT</abbr> @
+                      <strong>20</strong>%:</label>
+                    <output class="total-price-tax">€0</output>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <td class="total" colspan="3">
+                <ol>
+                  <li>
+                    <label>Total to be paid:</label>
+                    <output class="total-paid">€0</output>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+        <footer>
+          <p class="footer-cart-message">
+            <em>Free shipping! We will fly your order to your boat with one of our Daimler drones the moment you click that checkout
+              button!
+            </em>
+          </p>
+          <div class="cart-decision">
+            <a href="# ">Continue shopping</a>
+            <em>or</em>
+            <button type="submit" form="shoppingcart-form">Proceed to Checkout</button>
+          </div>
+        </footer>
+      </form>
+    </article>
+  </main>
+  <footer>
+    <div class="container copyright">
+      <a class="logo" href="https://www.daimler.com">
+        Link to Daimler Website
+      </a>
+      &copy; 2017
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>

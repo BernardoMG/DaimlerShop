@@ -1,0 +1,52 @@
+@import '../themes/default/default';
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $page-max-width;
+  box-sizing: border-box;
+
+  &.wrapper {
+      display: table;
+      padding: 10px 10px $vertical-rythm-spacing-component;
+      margin-bottom: 60px;
+      clear: both;
+  }
+
+  nav {
+      display: table-row;
+      padding-top: $vertical-rythm-spacing-component;
+
+      li:nth-child(2) {
+          ::before {
+              content: '»';
+              margin-right: 10px;
+          }
+      }
+  }
+
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    margin-bottom: $vertical-rythm-spacing-component;
+    padding: 0;
+
+    li {
+        float: left;
+
+        ol & {
+            display: none;
+        }
+    }
+
+    a {
+      margin-right: 10px;
+      color: $c-primary;
+
+      &.default {
+        color: black;
+      }
+    }
+  }
+}

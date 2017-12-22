@@ -1,0 +1,44 @@
+@import '../themes/default/default';
+
+footer {
+  @include theme-background;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  .container & {
+      position: relative;
+      background: none;
+
+      p {
+          position: absolute;
+          right: 0;
+          margin: 0;
+      }
+
+      button {
+        @include text-button;
+      }
+
+      .price {
+        font-weight: $font-weight-bold;
+      }
+  }
+
+  .logo {
+    @include link-with-logo;
+
+    margin-top: $vertical-rythm-spacing-text;
+    margin-bottom: $vertical-rythm-spacing-text;
+  }
+}
+
+.copyright {
+  color: $c-secondary;
+
+  @include not-desktop {
+    padding-left: 10px;
+  }
+}

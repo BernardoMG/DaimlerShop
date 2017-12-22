@@ -1,0 +1,80 @@
+@import '../themes/default/default';
+
+header {
+  @include theme-background;
+
+  section {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 350px;
+    z-index: 1;
+
+    ::after {
+      content: '';
+      background-image: url('#{$path-image-title-large}');
+      height: 350px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 1;
+      z-index: -1;
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center top;
+
+      @include high-density {
+        background-image: url('#{$path-image-title-large-2x}');
+      }
+
+      @include not-desktop {
+        background-image: url('#{$path-image-title-small}');
+        height: 280px;
+
+        @include high-density {
+          background-image: url('#{$path-image-title-small-2x}');
+        }
+      }
+    }
+
+    @include not-desktop {
+      height: 280px;
+    }
+  }
+}
+
+.container-header {
+  width: 90%;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $page-max-width;
+  align-items: center;
+  box-sizing: border-box;
+
+  h1 {
+    text-align: center;
+    vertical-align: middle;
+    color: $c-secondary;
+    font-size: $font-size-headline-primary-large;
+    font-weight: $font-weight-regular;
+    padding: 50px;
+
+    @include not-desktop {
+        font-weight: $font-weight-bolder;
+        font-size: $font-size-headline-primary;
+    }
+  }
+
+  a {
+    @include link-with-logo;
+
+    margin-top: $vertical-rythm-spacing-text;
+  }
+
+  @include not-desktop {
+    height: 280px;
+  }
+}
